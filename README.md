@@ -3,6 +3,15 @@ Lbry Mining Pool based on Yiimp
 To install the pool you will need:
 1. Ubuntu 16.04 VPS
 2. Install Script
+[![Build Status](https://travis-ci.org/tpruvot/yiimp.svg?branch=next)](https://travis-ci.org/tpruvot/yiimp)
+
+#yiimp - yaamp fork
+
+WARNINGS
+- Use at your own risks.
+- Usage of this software requires abilities with sysadmin, database admin, coin daemons, and sometimes a bit of programming. Running a production pool can literally be more work than a full-time job.
+
+Required:
 
 The install Script will install the pool and all dependencies needed.
 

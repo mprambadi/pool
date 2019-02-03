@@ -35,8 +35,7 @@ function BackendQuickClean()
 
 	foreach($coins as $coin)
 	{
-		$delay = time() - 24*60*60;
-		if ($coin->symbol=='DCR') $delay = time() - 7*24*60*60;
+		$delay = time() - 7*24*60*60;
 
 		$id = dboscalar("select id from blocks where coin_id=$coin->id and time<$delay and
 			id not in (select blockid from earnings where coinid=$coin->id)
@@ -135,7 +134,7 @@ function BackendCleanDatabase()
 	marketHistoryPrune();
 
 	$delay = time() - 60*24*60*60;
-//	dborun("delete from blocks where time<$delay");
+	dborun("DELETE from blocks where time<$delay");
 	dborun("delete from hashstats where time<$delay");
 	dborun("delete from payouts where time<$delay");
 	dborun("delete from rentertxs where time<$delay");
